@@ -1,0 +1,18 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pager]
+	branch = false
+[sendemail]
+	from =
+	smtpServer =
+	smtpUser =
+	smtpEncryption =
+[user]
+	name = cesar
+	email = dev@cesar.sh
