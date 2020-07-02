@@ -1,0 +1,20 @@
+[flake8]
+import_order_style = google
+exclude =
+    .git
+    __pycache__
+    bin
+    build
+    dist
+    docs/source/conf.py
+    include
+    lib
+    migrations
+    old
+    src
+application_import_names =
+    app
+    models
+    settings
+    tasks
+    utils
