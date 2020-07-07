@@ -50,6 +50,7 @@ vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
 nnoremap yo2 :setlocal expandtab shiftwidth=2 tabstop=2<CR>
 nnoremap yo4 :setlocal expandtab shiftwidth=4 tabstop=4<CR>
+nnoremap glt I<Tab>-<Space>[<Space>]<Space>
 nnoremap Q <Nop>
 
 " INDENTATION OVERRIDES
