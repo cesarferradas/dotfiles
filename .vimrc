@@ -70,6 +70,5 @@ let g:netrw_banner=0
 let g:python_highlight_all=1
 let g:vimwiki_list=[{
     \ 'path': '~/vimwiki/',
-    \ 'syntax': 'markdown',
-    \ 'ext': '.md'}]
+    \ 'ext': '.txt'}]
 let g:vimwiki_global_ext=0
