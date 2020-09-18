@@ -35,8 +35,7 @@ alias venv="source venv/bin/activate"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 
 greplace () {
-    grep --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,__pycache__} \
-        -rl "$1" . | xargs sed -i "" "s/$1/$2/g"
+    grep -rl $1 $3 | xargs sed -i "" "s $1 $2 g"
 }
 jurl () {
     curl -LSs \
