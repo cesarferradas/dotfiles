@@ -47,19 +47,16 @@ set wildignore+=*htmlcov/*
 nnoremap <Esc> <Esc>:noh<CR>
 vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
-nnoremap yo2 :setlocal expandtab shiftwidth=2 tabstop=2<CR>
-nnoremap yo4 :setlocal expandtab shiftwidth=4 tabstop=4<CR>
-nnoremap glt I<Tab>-<Space>[<Space>]<Space><Esc>
 nnoremap Q <Nop>
 
-" INDENTATION OVERRIDES
-autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType jst setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType pug setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType typescript setlocal expandtab shiftwidth=4 tabstop=4
+" DEFAULTS OVERRIDES
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 textwidth=0
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType jst setlocal shiftwidth=2 tabstop=2
+autocmd FileType pug setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
 
 " PLUGIN SETTINGS
 let g:ale_linters={'python': ['flake8']}
