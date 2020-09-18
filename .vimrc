@@ -10,7 +10,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vimwiki/vimwiki'
 call vundle#end()
 
 filetype plugin indent on
@@ -68,7 +67,3 @@ let g:ale_set_highlights=0
 let g:ale_sign_error = '!'
 let g:netrw_banner=0
 let g:python_highlight_all=1
-let g:vimwiki_list=[{
-    \ 'path': '~/vimwiki/',
-    \ 'ext': '.txt'}]
-let g:vimwiki_global_ext=0
