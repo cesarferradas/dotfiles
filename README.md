@@ -11,7 +11,10 @@
    own risk!):
     ```shell
     cd ~
-    git clone <repo_url> .
+    git init
+    git remote add origin <repo_url>
+    git fetch
+    git checkout -f master
     ./setup.sh
     ```
 
