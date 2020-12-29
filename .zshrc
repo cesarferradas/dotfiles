@@ -31,7 +31,6 @@ export EDITOR="nvim"
 alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
-alias ngrok="~/ngrok"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 alias t="task"
 alias venv="source venv/bin/activate"
@@ -49,6 +48,9 @@ jurl () {
 nvmload () {
     # load nvm manually to avoid slowing down shell startup time
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+}
+pyclean () {
+    find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 }
 setenv () {
     if [ -f .env-$1 ]; then
