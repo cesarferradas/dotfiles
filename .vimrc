@@ -25,7 +25,6 @@ colorscheme quantum
 set encoding=utf-8
 set mouse=a
 set number
-set relativenumber
 set nowrap
 set autoread
 set hidden
@@ -61,11 +60,11 @@ autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
 " PLUGIN SETTINGS
 let g:ale_linters={'python': ['flake8']}
 let g:ale_fixers={
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint --fix'],
 \   'python': ['isort', 'black']
 \}
 let g:ale_fix_on_save=1
 let g:ale_set_highlights=0
 let g:ale_sign_error = '!'
-let g:netrw_banner=0
 let g:python_highlight_all=1
+let g:netrw_banner=0
