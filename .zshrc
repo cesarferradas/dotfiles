@@ -28,14 +28,17 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="nvim"
 
-alias vim="nvim"
-alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset'"
+alias dc="docker-compose"
+alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
-alias venv="source venv/bin/activate"
+alias ngrok="~/ngrok"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
+alias t="task"
+alias venv="source venv/bin/activate"
+alias vim="nvim"
 
 greplace () {
-    grep -rl $1 $3 | xargs sed -i "" "s $1 $2 g"
+    grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
 jurl () {
     curl -LSs \
