@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+let g:polyglot_disabled = ['autoindent']
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -17,9 +19,11 @@ syntax on
 
 " COLOURS
 set background=dark
-set termguicolors
-let g:quantum_italics=1
-colorscheme quantum
+let g:solarized_termtrans=1
+colorscheme solarized
+" set termguicolors
+" let g:quantum_italics=1
+" colorscheme quantum
 
 " SETTINGS
 set encoding=utf-8
@@ -66,5 +70,6 @@ let g:ale_fixers={
 let g:ale_fix_on_save=1
 let g:ale_set_highlights=0
 let g:ale_sign_error = '!'
+let g:ale_sign_warning = '*'
 let g:python_highlight_all=1
 let g:netrw_banner=0
