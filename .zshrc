@@ -11,7 +11,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME=powerlevel9k/powerlevel9k
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time virtualenv dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_STATUS_CROSS=true
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
@@ -33,6 +33,7 @@ alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bo
 alias gpl="git pull"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 alias t="task"
+alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias vim="nvim"
 
