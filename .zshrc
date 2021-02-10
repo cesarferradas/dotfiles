@@ -2,11 +2,9 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
-
-export PYTHONDONTWRITEBYTECODE=1
-
+export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
-
+export PYTHONDONTWRITEBYTECODE=1
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME=powerlevel9k/powerlevel9k
@@ -25,8 +23,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-export EDITOR="nvim"
 
 alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
