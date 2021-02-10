@@ -11,14 +11,18 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
 call vundle#end()
 
 filetype plugin indent on
 syntax on
 
 " COLOURS
-set background=dark
+if has('gui_running')
+    set background=light
+    set guifont=MesloLGS\ NF:h14
+else
+    set background=dark
+endif
 let g:solarized_termtrans=1
 colorscheme solarized
 " set termguicolors
@@ -36,7 +40,6 @@ set splitbelow
 set splitright
 set foldmethod=indent
 set foldlevel=99
-set ignorecase
 set autoindent
 set expandtab
 set tabstop=4
@@ -69,7 +72,7 @@ let g:ale_fixers={
 \}
 let g:ale_fix_on_save=1
 let g:ale_set_highlights=0
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '*'
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '-'
 let g:python_highlight_all=1
 let g:netrw_banner=0
