@@ -4,16 +4,6 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>solarized-dark-patched</key>
@@ -231,6 +221,8 @@
 	<string>EC746524-A50C-4277-B91A-E279ED772D6E</string>
 	<key>DimOnlyText</key>
 	<false/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EnableDivisionView</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -580,13 +572,13 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.8901960784313725</real>
+				<real>0.21176470588235294</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.96470588235294119</real>
+				<real>0.16862745098039217</real>
 				<key>Red Component</key>
-				<real>0.99215686274509807</real>
+				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -610,13 +602,13 @@
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.45882352941176469</real>
+				<real>0.63137254901960782</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.43137254901960786</real>
+				<real>0.63137254901960782</real>
 				<key>Red Component</key>
-				<real>0.34509803921568627</real>
+				<real>0.57647058823529407</real>
 			</dict>
 			<key>Brighten Bold Text</key>
 			<true/>
@@ -633,13 +625,13 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.51372549019607838</real>
+				<real>0.58823529411764708</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.4823529411764706</real>
+				<real>0.58039215686274515</real>
 				<key>Red Component</key>
-				<real>0.396078431372549</real>
+				<real>0.51372549019607838</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -657,13 +649,13 @@
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.83529411764705885</real>
+				<real>0.25882352941176473</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90980392156862744</real>
+				<real>0.21176470588235294</real>
 				<key>Red Component</key>
-				<real>0.93333333333333335</real>
+				<real>0.027450980392156862</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -684,13 +676,13 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.51372549019607838</real>
+				<real>0.58823529411764708</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.4823529411764706</real>
+				<real>0.58039215686274515</real>
 				<key>Red Component</key>
-				<real>0.396078431372549</real>
+				<real>0.51372549019607838</real>
 			</dict>
 			<key>Guid</key>
 			<string>EC746524-A50C-4277-B91A-E279ED772D6E</string>
@@ -1002,7 +994,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.14049763762192918</real>
+			<real>0.074913069002890173</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -1028,24 +1020,24 @@
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.45882352941176469</real>
+				<real>0.63137254901960782</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.43137254901960786</real>
+				<real>0.63137254901960782</real>
 				<key>Red Component</key>
-				<real>0.34509803921568627</real>
+				<real>0.57647058823529407</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.83529411764705885</real>
+				<real>0.25882352941176473</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90980392156862744</real>
+				<real>0.21176470588235294</real>
 				<key>Red Component</key>
-				<real>0.93333333333333335</real>
+				<real>0.027450980392156862</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -1064,7 +1056,7 @@
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
 					<key>font</key>
-					<string>.AppleSystemUIFont 12</string>
+					<string>MesloLGS-NF-Bold 14</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -1110,7 +1102,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>.AppleSystemUIFont 12</string>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1154,7 +1146,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>.AppleSystemUIFont 12</string>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1168,7 +1160,7 @@
 							<key>knobs</key>
 							<dict>
 								<key>base: compression resistance</key>
-								<integer>1</integer>
+								<real>1</real>
 								<key>base: priority</key>
 								<real>5</real>
 								<key>iTermStatusBarGitComponentPollingIntervalKey</key>
@@ -1186,7 +1178,7 @@
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.20784313725490197</real>
+									<real>0.21176470588235294</real>
 									<key>Red Component</key>
 									<real>0.82745098039215681</real>
 								</dict>
@@ -1198,7 +1190,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>.AppleSystemUIFont 12</string>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1240,7 +1232,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>.AppleSystemUIFont 12</string>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
