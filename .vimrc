@@ -17,17 +17,10 @@ filetype plugin indent on
 syntax on
 
 " COLOURS
-if has('gui_running')
-    set background=light
-    set guifont=MesloLGS\ NF:h14
-else
-    set background=dark
-endif
+set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
-" set termguicolors
-" let g:quantum_italics=1
-" colorscheme quantum
+set guifont=MesloLGS\ NF:h14
 
 " SETTINGS
 set encoding=utf-8
