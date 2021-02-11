@@ -50,11 +50,12 @@ nnoremap Q <Nop>
 
 " DEFAULTS OVERRIDES
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 textwidth=0
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType jst setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2
-autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 
 " PLUGIN SETTINGS
 let g:ale_linters={'python': ['flake8']}
