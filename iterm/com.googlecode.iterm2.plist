@@ -222,7 +222,7 @@
 	<key>DimOnlyText</key>
 	<false/>
 	<key>EnableAPIServer</key>
-	<true/>
+	<false/>
 	<key>EnableDivisionView</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
