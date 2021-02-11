@@ -20,7 +20,6 @@ syntax on
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
-set guifont=MesloLGS\ NF:h14
 
 " SETTINGS
 set encoding=utf-8
