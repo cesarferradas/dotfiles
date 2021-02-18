@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -u
+
+py_files=$(git diff --cached --name-only | grep ".py" | xargs)
+
+if [ -z "$py_files" ]; then
+    echo no python files, skipping linting
+else
+    echo linting $py_files
+    flake8 --config=app/setup.cfg $py_files
+fi

@@ -10,6 +10,7 @@ brew install postgres
 brew install python
 brew install tree
 brew install zsh
+brew install httpie
 
 echo Setting up Zsh
 chsh -s /bin/zsh
