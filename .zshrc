@@ -5,6 +5,7 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 export PYTHONDONTWRITEBYTECODE=1
+export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME=powerlevel9k/powerlevel9k
@@ -28,7 +29,6 @@ alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
-alias t="task"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias vim="nvim"
@@ -36,14 +36,7 @@ alias vim="nvim"
 greplace () {
     grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
-jurl () {
-    curl -LSs \
-        -H "Accept: application/json" \
-        -H "Content-Type: application/json" \
-        "$@" | jq .
-}
 nvmload () {
-    # load nvm manually to avoid slowing down shell startup time
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
 pyclean () {
@@ -57,3 +50,6 @@ setenv () {
         echo "No file .env-$1"
     fi
 }
+
+if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
