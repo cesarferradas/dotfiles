@@ -45,7 +45,7 @@ set wildignore+=*htmlcov/*,**/.git/**,**/__pycache__/**,**/venv/**,**/node_modul
 nnoremap <Esc> <Esc>:noh<CR>
 vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
-nnoremap <C-p> :find<Space>
+nnoremap <C-p> :e<Space>
 nnoremap Q <Nop>
 
 " DEFAULTS OVERRIDES
@@ -61,7 +61,7 @@ autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 let g:ale_linters={'python': ['flake8']}
 let g:ale_fixers={
 \   'javascript': ['eslint --fix'],
-\   'python': ['isort', 'black']
+\   'python': ['black', 'isort']
 \}
 let g:ale_fix_on_save=1
 let g:ale_set_highlights=0
