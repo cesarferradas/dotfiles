@@ -14,6 +14,7 @@ less -r
 --ignore-dir=node_modules/
 --ignore-dir=__pycache__/
 --ignore-dir=venv/
+--ignore-dir=.mypy_cache/
 --ignore-dir=htmlcov/
 --ignore-dir=.pytest_cache/
 --ignore-file=is:tags

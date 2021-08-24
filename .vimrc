@@ -58,7 +58,7 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 
 " PLUGIN SETTINGS
-let g:ale_linters={'python': ['flake8']}
+let g:ale_linters={'python': ['flake8', 'mypy']}
 let g:ale_fixers={
 \   'javascript': ['eslint --fix'],
 \   'python': ['black', 'isort']
