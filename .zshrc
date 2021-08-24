@@ -18,9 +18,11 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 plugins=(
+  dotenv
   git
-  zsh-autosuggestions
+  python
   z
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -39,17 +41,8 @@ greplace () {
 nvmload () {
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
-pyclean () {
-    find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
-}
-setenv () {
-    if [ -f .env-$1 ]; then
-        export $(cat .env-$1 | xargs)
-        echo "ENV set to $ENV"
-    else
-        echo "No file .env-$1"
-    fi
-}
 
 if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
