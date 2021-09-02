@@ -3,7 +3,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
 export EDITOR="nvim"
-export NVM_DIR="$HOME/.nvm"
 export PYTHONDONTWRITEBYTECODE=1
 export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
@@ -18,11 +17,8 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 plugins=(
-  dotenv
   git
-  python
   z
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -30,19 +26,25 @@ source $ZSH/oh-my-zsh.sh
 alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
+alias k="kubectl"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias vim="nvim"
 
-greplace () {
+function cd () {
+  if [[ -d ./venv ]] ; then
+    deactivate
+  fi
+  builtin cd $1
+  if [[ -d ./venv ]] ; then
+    . ./venv/bin/activate
+  fi
+}
+function greplace () {
     grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
-nvmload () {
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-}
-
-if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
