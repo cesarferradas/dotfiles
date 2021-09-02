@@ -19,6 +19,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 plugins=(
   git
   z
+  zsh-autosuggestions 
 )
 
 source $ZSH/oh-my-zsh.sh
