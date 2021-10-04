@@ -18,6 +18,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 plugins=(
   git
+  python
   z
   zsh-autosuggestions 
 )
