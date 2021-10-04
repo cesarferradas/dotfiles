@@ -11,15 +11,18 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'kaicataldo/material.vim', { 'branch': 'main' }
 call vundle#end()
 
 filetype plugin indent on
 syntax on
 
 " COLOURS
+if (has('termguicolors'))
+  set termguicolors
+endif
 set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized
+colorscheme material
 
 " SETTINGS
 set encoding=utf-8
