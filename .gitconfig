@@ -15,4 +15,4 @@
 	smtpEncryption =
 [user]
 	name = cesar
-	email = git@ferrad.as
+	useConfigOnly = true
