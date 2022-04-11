@@ -1074,7 +1074,7 @@
 								<key>base: priority</key>
 								<real>5</real>
 								<key>format</key>
-								<string>hh:mm</string>
+								<string>HH:mm</string>
 								<key>localize</key>
 								<integer>1</integer>
 								<key>maxwidth</key>
@@ -1151,6 +1151,8 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
+								<key>font</key>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1174,6 +1176,8 @@
 								<integer>0</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
+								<key>font</key>
+								<string>MesloLGS-NF-Bold 14</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1261,7 +1265,7 @@
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -1281,7 +1285,7 @@
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
-	<true/>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
