@@ -11,6 +11,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 call vundle#end()
 
 filetype plugin indent on
@@ -74,3 +76,4 @@ let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
 let g:python_highlight_all=1
 let g:netrw_banner=0
+let g:notes_directories = ['~/Notes']
