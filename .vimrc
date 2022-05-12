@@ -81,4 +81,5 @@ let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
 let g:python_highlight_all=1
 let g:netrw_banner=0
-let g:notes_directories = ['~/Notes']
+let g:vimwiki_list = [{'path': '~/Documents/notes/',
+                      \ 'syntax': 'markdown', 'ext': '.txt'}]
