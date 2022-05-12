@@ -11,8 +11,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'xolox/vim-notes'
-Plugin 'xolox/vim-misc'
+Plugin 'vimwiki/vimwiki'
 call vundle#end()
 
 filetype plugin indent on
@@ -49,6 +48,11 @@ vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
 nnoremap <C-p> :e<Space>
 nnoremap Q <Nop>
+nnoremap <Space> <Nop>
+cnoreabbrev In VimwikiIndex
+cnoreabbrev Diary VimwikiMakeDiaryNote
+cnoreabbrev Gb Git blame
+
 
 " DEFAULTS OVERRIDES
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
@@ -68,7 +72,8 @@ let g:ale_linters={
 let g:ale_fixers={
 \   'javascript': ['standard'],
 \   'typescriptreact': ['prettier'],
-\   'python': ['black', 'isort']
+\   'python': ['black', 'isort'],
+\   '*': ['trim_whitespace']
 \}
 let g:ale_fix_on_save=1
 let g:ale_set_highlights=0
