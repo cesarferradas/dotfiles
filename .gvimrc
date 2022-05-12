@@ -1,3 +1,3 @@
 set guifont=MesloLGS\ NF:h15
 set lines=30
-set columns=80
+set columns=79
