@@ -11,7 +11,10 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'vimwiki/vimwiki'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -19,8 +22,8 @@ syntax on
 
 " COLOURS
 set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized
+" let g:solarized_termtrans=1
+colorscheme codedark
 
 " SETTINGS
 set encoding=utf-8
@@ -46,11 +49,8 @@ set wildignore+=*htmlcov/*,**/.git/**,**/__pycache__/**,**/venv/**,**/node_modul
 nnoremap <Esc> <Esc>:noh<CR>
 vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
-nnoremap <C-p> :e<Space>
 nnoremap Q <Nop>
 nnoremap <Space> <Nop>
-cnoreabbrev In VimwikiIndex
-cnoreabbrev Diary VimwikiMakeDiaryNote
 cnoreabbrev Gb Git blame
 
 
@@ -81,5 +81,4 @@ let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
 let g:python_highlight_all=1
 let g:netrw_banner=0
-let g:vimwiki_list = [{'path': '~/Documents/notes/',
-                      \ 'syntax': 'markdown', 'ext': '.txt'}]
+let g:netrw_list_hide= '__pycache__/'
