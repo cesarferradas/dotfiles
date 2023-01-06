@@ -19,3 +19,4 @@ less -r
 --ignore-dir=.pytest_cache/
 --ignore-file=is:tags
 --ignore-dir=.next/
+--ignore-dir=.terraform/
