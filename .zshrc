@@ -9,7 +9,9 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=$HOME/apache-maven-3.8.6/bin:$PATH
 export EDITOR="nvim"
+export HISTFILE=$HOME/.zsh_history
 export PYTHONDONTWRITEBYTECODE=1
 export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
@@ -20,7 +22,8 @@ plugins=(
   git
   python
   z
-  zsh-autosuggestions 
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
