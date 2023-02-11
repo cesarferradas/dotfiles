@@ -9,6 +9,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=/opt/homebrew/Cellar:$PATH
 export PATH=$HOME/apache-maven-3.8.6/bin:$PATH
 export EDITOR="nvim"
 export HISTFILE=$HOME/.zsh_history
@@ -57,7 +58,4 @@ if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ces
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.1
+eval "$(/opt/homebrew/bin/brew shellenv)"
