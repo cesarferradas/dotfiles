@@ -67,11 +67,13 @@ autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 let g:ale_linters={
 \   'javascript': ['standard'],
 \   'typescriptreact': ['prettier'],
+\   'typescript': ['prettier'],
 \   'python': ['flake8', 'mypy']
 \}
 let g:ale_fixers={
 \   'javascript': ['standard'],
 \   'typescriptreact': ['prettier'],
+\   'typescript': ['prettier'],
 \   'python': ['black', 'isort'],
 \   '*': ['trim_whitespace']
 \}
