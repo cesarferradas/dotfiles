@@ -13,8 +13,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tomasiser/vim-code-dark'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'rescript-lang/vim-rescript'
+Plugin 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -30,6 +33,9 @@ set encoding=utf-8
 set mouse=a
 set number
 set nowrap
+set nobackup
+set nowritebackup
+set noswapfile
 set autoread
 set hidden
 set splitbelow
@@ -38,12 +44,12 @@ set foldmethod=indent
 set foldlevel=99
 set autoindent
 set expandtab
+set updatetime=500
 set tabstop=4
 set shiftwidth=4
 set shiftround
-set path+=**
 set wildmenu
-set wildignore+=*htmlcov/*,**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp
+set wildignore+=*htmlcov/*,**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp,*.bs.js
 
 " MAPPINGS
 nnoremap <Esc> <Esc>:noh<CR>
@@ -83,4 +89,29 @@ let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
 let g:python_highlight_all=1
 let g:netrw_banner=0
-let g:netrw_list_hide= '__pycache__/'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+let $FZF_DEFAULT_OPTS="--preview-window 'bottom:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=plain --line-range :200 {}'"
+
+" coc.nvim
+" Use tab for trigger completion with characters ahead and navigate
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
