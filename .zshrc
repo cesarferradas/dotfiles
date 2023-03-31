@@ -9,13 +9,19 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=/opt/homebrew/opt:$PATH
 export PATH=/opt/homebrew/Cellar:$PATH
-export PATH=$HOME/apache-maven-3.8.6/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH=$VOLTA_HOME/bin:$PATH
 export EDITOR="nvim"
 export HISTFILE=$HOME/.zsh_history
 export PYTHONDONTWRITEBYTECODE=1
 export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
+export PATH=./node_modules/.bin:$PATH
+export PATH=$HOME/.asdf/installs:$PATH
+export BAT_THEME="Visual Studio Dark+"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 
@@ -36,17 +42,9 @@ alias k="kubectl"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
+alias python="python3"
 alias vim="nvim"
 
-function cd () {
-  if [[ -d ./venv ]] ; then
-    deactivate
-  fi
-  builtin cd $1
-  if [[ -d ./venv ]] ; then
-    . ./venv/bin/activate
-  fi
-}
 function greplace () {
     grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
@@ -55,7 +53,4 @@ function greplace () {
 if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
