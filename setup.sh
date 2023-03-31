@@ -6,11 +6,14 @@ echo Installing Homebrew
 brew install ctags
 brew install jq
 brew install kubectx
+brew install python
+brew install vim
 brew install neovim
 brew install postgres
-brew install python
 brew install tree
+brew install the_silver_searcher
 brew install zsh
+brew install bat
 
 echo Setting up Zsh
 chsh -s /bin/zsh
