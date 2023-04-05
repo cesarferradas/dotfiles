@@ -11,9 +11,8 @@ brew install vim
 brew install neovim
 brew install postgres
 brew install tree
-brew install the_silver_searcher
 brew install zsh
-brew install bat
+brew install ripgrep
 
 echo Setting up Zsh
 chsh -s /bin/zsh
