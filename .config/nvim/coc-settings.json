@@ -5,6 +5,7 @@
   "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
+  "inlayHint.enable": false,
   "languageserver": {
     "rescript": {
       "enable": true,
@@ -13,5 +14,8 @@
       "filetypes": ["rescript"],
       "rootPatterns": ["bsconfig.json"]
     }
-  }
+  },
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true
 }
