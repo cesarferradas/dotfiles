@@ -21,7 +21,7 @@ export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
 export PATH=./node_modules/.bin:$PATH
 export PATH=$HOME/.asdf/installs:$PATH
-export BAT_THEME="Visual Studio Dark+"
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 
