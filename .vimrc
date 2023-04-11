@@ -3,23 +3,24 @@ filetype off
 
 let g:polyglot_disabled = ['autoindent']
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
-Plugin 'rescript-lang/vim-rescript'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'dracula/vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
-call vundle#end()
+let plug_location = '~/.vim/autoload/plug.vim'
+if empty(glob(plug_location))
+  silent execute '!curl -fLo '.plug_location.' --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-filetype plugin indent on
-syntax on
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'rescript-lang/vim-rescript'
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+call plug#end()
 
 " COLOURS
 set background=dark
