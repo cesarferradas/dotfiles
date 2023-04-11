@@ -45,10 +45,14 @@ set autoindent
 set expandtab
 set updatetime=500
 set tabstop=4
+set ignorecase
+set smartcase
 set shiftwidth=4
 set shiftround
+set showtabline=2
+set laststatus=2
 set wildmenu
-set wildignore+=*htmlcov/*,**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp,*.bs.js
+set wildignore+=htmlcov/,.git/,__pycache__/,__generated__/,node_modules/,*.o,*.pyc,*.swp,*.bs.js
 
 " MAPPINGS
 nnoremap <Esc> <Esc>:noh<CR>
