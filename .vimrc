@@ -62,9 +62,10 @@ nnoremap Q <Nop>
 nnoremap <Space> <Nop>
 cnoreabbrev t tabe
 cnoreabbrev Gb Git blame
-nnoremap <C-p> :Files<CR>
-nnoremap <leader>f :Rg<space>
-nnoremap <leader>b :Buffers<CR>
+cnoreabbrev F Rg
+nnoremap <C-P> :Files<CR>
+nnoremap ; :Buffers<CR>
+nnoremap F :Rg<space>
 
 " DEFAULTS OVERRIDES
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
@@ -79,7 +80,7 @@ autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 " PLUGIN SETTINGS
 let g:python_highlight_all=1
 let g:netrw_banner=0
-let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'down': '35%' }
 let g:fzf_preview_window = []
 let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings -g '!__generated__' -g '!*bs.js'"
 
