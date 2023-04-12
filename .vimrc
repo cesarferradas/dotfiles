@@ -1,8 +1,6 @@
 set nocompatible
 filetype off
 
-let g:polyglot_disabled = ['autoindent']
-
 let plug_location = '~/.vim/autoload/plug.vim'
 if empty(glob(plug_location))
   silent execute '!curl -fLo '.plug_location.' --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -81,6 +79,7 @@ autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 let g:python_highlight_all=1
 let g:netrw_banner=0
 let g:fzf_layout = { 'down': '35%' }
+let g:fzf_buffers_jump = 1
 let g:fzf_preview_window = []
 let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings -g '!__generated__' -g '!*bs.js'"
 
