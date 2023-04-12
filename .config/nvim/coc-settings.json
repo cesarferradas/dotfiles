@@ -1,12 +1,10 @@
 {
   "coc.preferences.formatOnSave": true,
-  "diagnostic.messageTarget": "float",
-  "diagnostic.errorSign": "•",
-  "diagnostic.hintSign": "•",
+  "diagnostic.format": "%message (%source)",
+  "diagnostic.hintSign": "",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
-  "diagnostic.level": "information",
-  "inlayHint.enable": false,
+  "diagnostic.errorSign": "•",
   "languageserver": {
     "rescript": {
       "enable": true,
