@@ -9,7 +9,8 @@ brew install kubectx
 brew install python
 brew install vim
 brew install neovim
-brew install postgres
+brew install postgresql
+brew install pgcli
 brew install tree
 brew install zsh
 brew install ripgrep
