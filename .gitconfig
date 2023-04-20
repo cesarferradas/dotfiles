@@ -18,3 +18,5 @@
 	useConfigOnly = true
 [pull]
 	rebase = false
+[alias]
+	ci = !git branch | fzf --height=30% --reverse | xargs git checkout
