@@ -12,15 +12,14 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt:$PATH
 export PATH=/opt/homebrew/Cellar:$PATH
 export PATH=/opt/homebrew/bin:$PATH
-export VOLTA_HOME="$HOME/.volta"
-export PATH=$VOLTA_HOME/bin:$PATH
+export PATH=$HOME/.asdf/installs:$PATH
+export PATH=./node_modules/.bin:$PATH
+
 export EDITOR="nvim"
 export HISTFILE=$HOME/.zsh_history
 export PYTHONDONTWRITEBYTECODE=1
 export HISTCONTROL=ignorespace
 export ZSH=$HOME/.oh-my-zsh
-export PATH=./node_modules/.bin:$PATH
-export PATH=$HOME/.asdf/installs:$PATH
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 ZSH_THEME=powerlevel10k/powerlevel10k
@@ -35,6 +34,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.asdf/asdf.sh ] && source ~/.asdf/asdf.sh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
+
 alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
@@ -48,9 +53,3 @@ alias vim="nvim"
 function greplace () {
     grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
