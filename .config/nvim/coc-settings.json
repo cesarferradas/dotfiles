@@ -1,7 +1,8 @@
 {
   "coc.preferences.formatOnSave": true,
+  "diagnostic.checkCurrentLine": true,
   "diagnostic.format": "%message (%source)",
-  "diagnostic.hintSign": "",
+  "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.errorSign": "•",
