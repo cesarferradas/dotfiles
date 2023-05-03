@@ -43,6 +43,7 @@ if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ces
 alias dc="docker-compose"
 alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
 alias gpl="git pull"
+alias gci="git ci"
 alias k="kubectl"
 alias rmdsstore="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
