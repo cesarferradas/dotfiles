@@ -18,6 +18,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " COLOURS
@@ -47,8 +48,6 @@ set ignorecase
 set smartcase
 set shiftwidth=4
 set shiftround
-set showtabline=2
-set laststatus=2
 set wildmenu
 set wildignore+=htmlcov/,.git/,__pycache__/,__generated__/,node_modules/,*.o,*.pyc,*.swp,*.bs.js
 
@@ -78,9 +77,18 @@ autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 " PLUGIN SETTINGS
 let g:python_highlight_all=1
 let g:netrw_banner=0
-let g:fzf_layout = { 'down': '35%' }
+let g:ale_linters_explicit = 1
+let g:ale_javascript_eslint_executable = 'healthier'
+let g:ale_linters = { 'javascript': ['eslint'] }
+let g:ale_sign_warning = '•'
+let g:ale_sign_info = '•'
+let g:ale_sign_error = '•'
+let g:ale_virtualtext_cursor = 0
+let g:ale_set_highlights=0
+let g:fzf_layout = { 'down': '40%' }
 let g:fzf_buffers_jump = 1
 let g:fzf_preview_window = []
+let g:coc_global_extensions = ['coc-tsserver', 'coc-prettier', 'coc-json', 'coc-pyright']
 let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings -g '!__generated__' -g '!*bs.js'"
 
 " coc.nvim
