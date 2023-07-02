@@ -24,3 +24,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
 source ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+echo Setting screenshots dir
+mkdir $HOME/Screenshots
+defaults write com.apple.screencapture location $HOME/Screenshots
+killall SystemUIServer
