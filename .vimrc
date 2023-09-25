@@ -10,7 +10,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'rescript-lang/vim-rescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
