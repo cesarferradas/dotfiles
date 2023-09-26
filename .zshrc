@@ -12,7 +12,6 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt:$PATH
 export PATH=/opt/homebrew/Cellar:$PATH
 export PATH=/opt/homebrew/bin:$PATH
-export PATH=$HOME/.asdf/installs:$PATH
 export PATH=./node_modules/.bin:$PATH
 
 export EDITOR="nvim"
@@ -35,17 +34,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.asdf/asdf.sh ] && source ~/.asdf/asdf.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias dc="docker-compose"
-alias gl="git log --format='format:%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)<%an>%Creset'"
+alias gl="git log --format='%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)%an%Creset'"
 alias gpl="git pull"
 alias gci="git ci"
 alias k="kubectl"
-alias rmdsstore="find ./ -iname .DS_Store -delete"
+alias rmdst="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias python="python3"
@@ -54,3 +52,7 @@ alias vim="nvim"
 function greplace () {
     grep -rl $1 $3 | LANG=C xargs sed -i "" "s/$1/$2/g"
 }
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
