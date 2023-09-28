@@ -58,6 +58,8 @@ nnoremap <Space> <Nop>
 cnoreabbrev t tabe
 cnoreabbrev Gb Git blame
 cnoreabbrev F Rg
+cnoreabbrev Cf let @+=expand("%")<CR>
+cnoreabbrev Cd let @+=expand("%:p:h")<CR>
 nnoremap <C-P> :Files<CR>
 nnoremap ; :Buffers<CR>
 nnoremap F :Rg<space>
