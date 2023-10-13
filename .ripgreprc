@@ -1,5 +1,1 @@
 --fixed-strings
---colors=path:fg:white
---colors=line:fg:white
---colors=match:fg:green
---colors=match:style:nobold
