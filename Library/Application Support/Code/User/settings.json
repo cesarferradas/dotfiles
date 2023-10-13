@@ -1,0 +1,38 @@
+{
+    "[python]": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSaveMode": "file",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "breadcrumbs.icons": false,
+    "editor.folding": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.matchBrackets": "near",
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderLineHighlight": "none",
+    "editor.renderWhitespace": "trailing",
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 2,
+    "search.quickOpen.history.filterSortOrder": "recency",
+    "terminal.integrated.scrollback": 100000,
+    "window.commandCenter": false,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.showIcons": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.statusBar.enabled": false,
+}
