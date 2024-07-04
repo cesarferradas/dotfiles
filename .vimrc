@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'dracula/vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -22,7 +21,7 @@ call plug#end()
 " COLOURS
 set background=dark
 set termguicolors
-colorscheme dracula
+colorscheme default
 
 " SETTINGS
 set encoding=utf-8
