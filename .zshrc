@@ -9,15 +9,17 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/opt:$PATH
 export PATH=/opt/homebrew/Cellar:$PATH
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=./node_modules/.bin:$PATH
+export PATH=/opt/homebrew/Cellar/ruby/3.3.1/bin:$PATH
+export PATH=$HOME/.gem/ruby/3.3.0/bin:$PATH
 
 export EDITOR="nvim"
 export HISTFILE=$HOME/.zsh_history
-export PYTHONDONTWRITEBYTECODE=1
+export HISTSIZE=999999
 export HISTCONTROL=ignorespace
+export PYTHONDONTWRITEBYTECODE=1
 export ZSH=$HOME/.oh-my-zsh
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
@@ -35,11 +37,9 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-if [ -f '/Users/cesar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/cesar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cesar/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias dc="docker-compose"
-alias gl="git log --format='%C(yellow)%h%Creset %s %C(red)%D%Creset %C(bold blue)%an%Creset'"
+alias gl="git log --format='%C(yellow)%h%Creset %C(blue)%an%Creset %C(green)%cr%Creset %s %C(red)%D%Creset'"
 alias gpl="git pull"
 alias gci="git ci"
 alias k="kubectl"
@@ -47,6 +47,7 @@ alias rmdst="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias python="python3"
+alias tagpy="ctags -R --fields=+l --languages=python --python-kinds=-iv"
 alias vim="nvim"
 
 function greplace () {
