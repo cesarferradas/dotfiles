@@ -20,3 +20,6 @@
 	rebase = false
 [alias]
 	ci = !git branch | fzf --height=30% --reverse | xargs git checkout
+	ai = !git diff --name-only | fzf --height=30% --reverse | xargs git add
+[push]
+	autoSetupRemote = true
