@@ -41,7 +41,6 @@ set autoindent
 set expandtab
 set updatetime=500
 set tabstop=4
-set ignorecase
 set smartcase
 set shiftwidth=4
 set shiftround
