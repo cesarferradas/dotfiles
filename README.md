@@ -19,4 +19,4 @@ A collection of config files for my iTerm + Oh My Zsh terminal setup.
    ```
 
 1. Go to `iTerm2 > Preferences > Profiles > Colors` and import the
-   `iterm/Dracula.itermcolors` preset.
+   `iterm/NvimDark.itermcolors` preset.
