@@ -56,13 +56,15 @@ inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
 nnoremap Q <Nop>
 nnoremap <Space> <Nop>
 cnoreabbrev t tabe
-cnoreabbrev Gb Git blame
-cnoreabbrev F Rg
+cnoreabbrev Gbl Git blame
+cnoreabbrev Gd Gvdiffsplit
 cnoreabbrev Cf let @+=expand("%")<CR>
-cnoreabbrev Cd let @+=expand("%:p:h")<CR>
+cnoreabbrev Cd let @+=expand("%:h")<CR>
 nnoremap <C-P> :Files<CR>
 nnoremap ; :Buffers<CR>
 nnoremap F :Rg<space>
+nnoremap ]a :ALENextWrap<CR>
+nnoremap [a :ALEPreviousWrap<CR>
 
 " DEFAULTS OVERRIDES
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
@@ -75,19 +77,24 @@ autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 
 " PLUGIN SETTINGS
-let g:python_highlight_all=1
 let g:netrw_banner=0
+let g:python_highlight_all = 1
+let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_linters_explicit = 1
-let g:ale_linters = { 'javascript': ['eslint'], 'python': ['flake8', 'mypy'] }
-let g:ale_lint_on_save= 1
-let g:ale_fixers = { 'python': ['black', 'isort'] }
-let g:ale_fix_on_save= 1
+let g:ale_lint_on_save = 1
+let g:ale_linters = { 'python': ['flake8', 'mypy'] }
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort']
+\}
 let g:ale_sign_warning = '•'
 let g:ale_sign_info = '•'
 let g:ale_sign_error = '•'
 let g:ale_virtualtext_cursor = 0
-let g:ale_set_highlights=0
-let g:fzf_layout = { 'down': '40%' }
+let g:ale_set_highlights = 0
+
+let g:fzf_layout = { 'down': '40%' } " { 'window': 'enew' }
 let g:fzf_buffers_jump = 1
 let g:fzf_preview_window = []
-let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings -g '!__generated__' -g '!*bs.js'"
+let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings"
