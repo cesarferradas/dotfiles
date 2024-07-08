@@ -74,6 +74,12 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 
+" :help E669 or guifg
+highlight PreProc guifg=NvimLightMagenta
+highlight Operator guifg=NvimLightMagenta
+highlight Type guifg=NvimLightYellow
+highlight Constant guifg=NvimLightYellow
+
 " PLUGIN SETTINGS
 let g:netrw_banner=0
 let g:python_highlight_all = 1
