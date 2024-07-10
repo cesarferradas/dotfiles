@@ -92,9 +92,6 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black', 'isort']
 \}
-let g:ale_sign_warning = '•'
-let g:ale_sign_info = '•'
-let g:ale_sign_error = '•'
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_highlights = 0
 
