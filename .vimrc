@@ -63,6 +63,7 @@ nnoremap ; :Buffers<CR>
 nnoremap F :Rg<space>
 nnoremap ]a :ALENextWrap<CR>
 nnoremap [a :ALEPreviousWrap<CR>
+nnoremap <C-]> :ALEGoToDefinition<CR>
 
 " DEFAULTS OVERRIDES
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
@@ -86,11 +87,12 @@ let g:python_highlight_all = 1
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_save = 1
-let g:ale_linters = { 'python': ['flake8', 'mypy'] }
+let g:ale_linters = { 'python': ['ruff', 'mypy', 'pyright'] }
+let g:ale_python_pyright_config = {'python': {'analysis': {'typeCheckingMode': 'off'}}}
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black', 'isort']
+\   'python': ['ruff_format', 'ruff']
 \}
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_highlights = 0
