@@ -98,7 +98,6 @@ let g:ale_sign_error = '•'
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_highlights = 0
 
-let g:fzf_layout = { 'down': '40%' } " { 'window': 'enew' }
-let g:fzf_buffers_jump = 1
-let g:fzf_preview_window = []
-let $FZF_DEFAULT_COMMAND="rg --files --fixed-strings"
+let g:fzf_layout = { 'down': '50%' } " { 'window': 'enew' }
+let g:fzf_vim_buffers_jump = 1
+let $FZF_DEFAULT_COMMAND = 'rg --files --fixed-strings'
