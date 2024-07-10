@@ -47,7 +47,6 @@ alias rmdst="find ./ -iname .DS_Store -delete"
 alias tf="terraform"
 alias venv="source venv/bin/activate"
 alias python="python3"
-alias tagpy="ctags -R --fields=+l --languages=python --python-kinds=-iv"
 alias vim="nvim"
 
 function greplace () {
