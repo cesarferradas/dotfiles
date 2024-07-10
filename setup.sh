@@ -15,6 +15,7 @@ brew install tree
 brew install zsh
 brew install ripgrep
 brew install bat
+brew install pyright
 
 echo Setting up Zsh
 chsh -s /bin/zsh
