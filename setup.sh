@@ -14,6 +14,7 @@ brew install pgcli
 brew install tree
 brew install zsh
 brew install ripgrep
+brew install bat
 
 echo Setting up Zsh
 chsh -s /bin/zsh
