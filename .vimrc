@@ -72,7 +72,7 @@ highlight Constant guifg=NvimLightYellow
 " PLUGIN SETTINGS
 let g:netrw_banner=0
 let g:python_highlight_all = 1
-let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_echo_msg_format = '[%linter%] %code %%s'
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_save = 1
 let g:ale_linters = { 'python': ['ruff', 'mypy', 'pyright'] }
