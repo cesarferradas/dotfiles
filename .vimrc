@@ -40,9 +40,7 @@ set foldlevel=99
 set autoindent
 set expandtab
 set updatetime=500
-set tabstop=4
 set smartcase
-set shiftwidth=4
 set shiftround
 set wildmenu
 set wildignore+=htmlcov/,.git/,__pycache__/,__generated__/,node_modules/,*.o,*.pyc,*.swp,*.bs.js
@@ -64,16 +62,6 @@ nnoremap F :Rg<space>
 nnoremap ]a :ALENextWrap<CR>
 nnoremap [a :ALEPreviousWrap<CR>
 nnoremap <C-]> :ALEGoToDefinition<CR>
-
-" DEFAULTS OVERRIDES
-autocmd FileType css setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType jst setlocal shiftwidth=2 tabstop=2
-autocmd FileType scss setlocal shiftwidth=2 tabstop=2
-autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
-autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
-autocmd FileType rescript setlocal shiftwidth=2 tabstop=2
 
 " :help E669 or guifg
 highlight PreProc guifg=NvimLightMagenta
