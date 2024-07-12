@@ -67,7 +67,7 @@ nnoremap <C-]> :ALEGoToDefinition<CR>
 highlight PreProc guifg=NvimLightMagenta
 highlight Operator guifg=NvimLightMagenta
 highlight Type guifg=NvimLightYellow
-highlight Constant guifg=NvimLightYellow
+highlight Constant guifg=NvimLightRed
 
 " PLUGIN SETTINGS
 let g:netrw_banner=0
