@@ -51,7 +51,6 @@ vnoremap <C-c> "+y
 inoremap <C-v> <Esc>:set paste<CR>"+pa<Esc>:set nopaste<CR>
 nnoremap Q <Nop>
 nnoremap <Space> <Nop>
-cnoreabbrev t tabe
 cnoreabbrev Gbl Git blame
 cnoreabbrev Gd Gvdiffsplit
 cnoreabbrev Cf let @+=expand("%")<CR>
@@ -62,6 +61,7 @@ nnoremap F :Rg<space>
 nnoremap ]a :ALENextWrap<CR>
 nnoremap [a :ALEPreviousWrap<CR>
 nnoremap <C-]> :ALEGoToDefinition<CR>
+nnoremap <silent> gr :ALEFindReferences<CR>
 
 " :help E669 or guifg
 highlight PreProc guifg=NvimLightMagenta
