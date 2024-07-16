@@ -36,8 +36,7 @@
   # icon overlap when using non-monospace fonts. When set to `none`, spaces are not added.
   typeset -g POWERLEVEL9K_ICON_PADDING=none
 
-  # Basic style options that define the overall look of your prompt. You probably don't want to
-  # change them.
+  # Basic style options that define the overall look of your prompt.
   typeset -g POWERLEVEL9K_BACKGROUND=                            # transparent background
   typeset -g POWERLEVEL9K_{LEFT,RIGHT}_{LEFT,RIGHT}_WHITESPACE=  # no surrounding whitespace
   typeset -g POWERLEVEL9K_{LEFT,RIGHT}_SUBSEGMENT_SEPARATOR=' '  # separate segments with a space
@@ -129,10 +128,8 @@
 
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
       local branch=${(V)VCS_STATUS_LOCAL_BRANCH}
-      # If local branch name is at most 32 characters long, show it in full.
-      # Otherwise show the first 12 … the last 12.
       # Tip: To always show local branch name in full without truncation, delete the next line.
-      (( $#branch > 32 )) && branch[13,-13]="…"  # <-- this line
+      (( $#branch > 26 )) && branch[13,-13]=".."
       res+="${clean}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}${branch//\%/%%}"
     fi
 
@@ -142,21 +139,14 @@
           && -z $VCS_STATUS_LOCAL_BRANCH  # <-- this line
         ]]; then
       local tag=${(V)VCS_STATUS_TAG}
-      # If tag name is at most 32 characters long, show it in full.
-      # Otherwise show the first 12 … the last 12.
       # Tip: To always show tag name in full without truncation, delete the next line.
-      (( $#tag > 32 )) && tag[13,-13]="…"  # <-- this line
+      (( $#tag > 26 )) && tag[13,-13]=".."
       res+="${meta}#${clean}${tag//\%/%%}"
     fi
 
     # Show tracking branch name if it differs from local branch.
     if [[ -n ${VCS_STATUS_REMOTE_BRANCH:#$VCS_STATUS_LOCAL_BRANCH} ]]; then
       res+="${meta}:${clean}${(V)VCS_STATUS_REMOTE_BRANCH//\%/%%}"
-    fi
-
-    # Display "wip" if the latest commit's summary contains "wip" or "WIP".
-    if [[ $VCS_STATUS_COMMIT_SUMMARY == (|*[^[:alnum:]])(wip|WIP)(|[^[:alnum:]]*) ]]; then
-      res+=" ${modified}wip"
     fi
 
     if (( VCS_STATUS_COMMITS_AHEAD || VCS_STATUS_COMMITS_BEHIND )); then
@@ -186,14 +176,11 @@
     # !42 if have unstaged changes.
     (( VCS_STATUS_NUM_UNSTAGED   )) && res+=" ${modified}!${VCS_STATUS_NUM_UNSTAGED}"
     # ?42 if have untracked files. It's really a question mark, your font isn't broken.
-    # See POWERLEVEL9K_VCS_UNTRACKED_ICON above if you want to use a different icon.
     # Remove the next line if you don't want to see untracked files at all.
     (( VCS_STATUS_NUM_UNTRACKED  )) && res+=" ${untracked}${(g::)POWERLEVEL9K_VCS_UNTRACKED_ICON}${VCS_STATUS_NUM_UNTRACKED}"
     # "─" if the number of unstaged files is unknown. This can happen due to
     # POWERLEVEL9K_VCS_MAX_INDEX_SIZE_DIRTY (see below) being set to a non-negative number lower
-    # than the number of files in the Git index, or due to bash.showDirtyState being set to false
-    # in the repository config. The number of staged and untracked files may also be unknown
-    # in this case.
+    # than the number of files in the Git index.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
 
     typeset -g my_git_format=$res
@@ -202,16 +189,13 @@
 
   # Don't count the number of unstaged, untracked and conflicted files in Git repositories with
   # more than this many files in the index. Negative value means infinity.
-  #
   # If you are working in Git repositories with tens of millions of files and seeing performance
   # sagging, try setting POWERLEVEL9K_VCS_MAX_INDEX_SIZE_DIRTY to a number lower than the output
-  # of `git ls-files | wc -l`. Alternatively, add `bash.showDirtyState = false` to the repository's
-  # config: `git config bash.showDirtyState false`.
-  typeset -g POWERLEVEL9K_VCS_MAX_INDEX_SIZE_DIRTY=-1
+  # of `git ls-files | wc -l`.
+  typeset -g POWERLEVEL9K_VCS_MAX_INDEX_SIZE_DIRTY=10000
 
   # Don't show Git status in prompt for repositories whose workdir matches this pattern.
   # For example, if set to '~', the Git repository at $HOME/.git will be ignored.
-  # Multiple patterns can be combined with '|': '~(|/foo)|/bar/baz/*'.
   typeset -g POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN='~'
 
   # Disable the default Git status formatting.
@@ -228,9 +212,7 @@
   # Custom icon.
   typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION=
 
-  # Show status of repositories of these types. You can add svn and/or hg if you are
-  # using them. If you do, your prompt may become slow even when your current directory
-  # isn't in an svn or hg repository.
+  # Show status of repositories of these types.
   typeset -g POWERLEVEL9K_VCS_BACKENDS=(git)
 
   ###################[ command_execution_time: duration of the last command ]###################
