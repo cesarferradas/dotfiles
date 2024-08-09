@@ -91,3 +91,6 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" Better floating window colours
+highlight CocMenuSel guibg=NvimDarkGray4
+highlight CocFloating guibg=NvimDarkGray2

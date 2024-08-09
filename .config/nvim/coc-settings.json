@@ -2,16 +2,22 @@
   "coc.preferences.formatOnSave": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.format": "%source%code: %message",
-  "diagnostic.level": "information",
-  "diagnostic.errorSign": "•",
-  "diagnostic.hintSign": "•",
-  "diagnostic.infoSign": "•",
-  "diagnostic.warningSign": "•",
+  "diagnostic.errorSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
+  "inlayHint.enable": false,
   "pyright.enable": true,
   "pyright.organizeimports.provider": "ruff",
   "python.analysis.typeCheckingMode": "off",
   "python.formatting.provider": "ruff",
   "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
   "python.linting.ruffEnabled": true,
-  "inlayHint.enable": false
+  "suggest.floatConfig": {
+    "border": true
+  },
+  "floatFactory.floatConfig": {
+    "border": true
+  }
 }
