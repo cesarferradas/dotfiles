@@ -8,6 +8,7 @@ if empty(glob(plug_location))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -15,7 +16,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'dense-analysis/ale'
 call plug#end()
 
 " COLOURS
@@ -60,8 +60,9 @@ nnoremap ; :Buffers<CR>
 nnoremap F :Rg<space>
 nnoremap ]a :ALENextWrap<CR>
 nnoremap [a :ALEPreviousWrap<CR>
-nnoremap <C-]> :ALEGoToDefinition<CR>
-nnoremap <silent> gr :ALEFindReferences<CR>
+nnoremap <C-]> <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 
 " :help E669 or guifg
 highlight PreProc guifg=NvimLightMagenta
@@ -72,19 +73,21 @@ highlight Constant guifg=NvimLightRed
 " PLUGIN SETTINGS
 let g:netrw_banner=0
 let g:python_highlight_all = 1
-let g:ale_echo_msg_format = '[%linter%] %code %%s'
-let g:ale_linters_explicit = 1
-let g:ale_lint_on_save = 1
-let g:ale_linters = { 'python': ['ruff', 'mypy', 'pyright'] }
-let g:ale_python_pyright_config = {'python': {'analysis': {'typeCheckingMode': 'off'}}}
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['ruff_format', 'ruff']
-\}
-let g:ale_virtualtext_cursor = 0
-let g:ale_set_highlights = 0
-
 let g:fzf_layout = { 'down': '50%' } " { 'window': 'enew' }
 let g:fzf_vim_buffers_jump = 1
 let $FZF_DEFAULT_COMMAND = 'rg --files --fixed-strings'
+
+" coc.nvim
+" Use tab for trigger completion
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
