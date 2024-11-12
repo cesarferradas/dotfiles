@@ -72,5 +72,7 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "workbench.editor.editorActionsLocation": "titleBar",
   "window.systemColorTheme": "auto",
-  "workbench.colorTheme": "Default High Contrast",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "extensions.ignoreRecommendations": true,
 }
