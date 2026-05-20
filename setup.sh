@@ -25,7 +25,9 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
 source ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
-echo Setting screenshots dir
+echo Setting screenshots dir and file names
 mkdir $HOME/Screenshots
 defaults write com.apple.screencapture location $HOME/Screenshots
+defaults write com.apple.screencapture "include-date" 0
+defaults write com.apple.screencapture name "snap"
 killall SystemUIServer
